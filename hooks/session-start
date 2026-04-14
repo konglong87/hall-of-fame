@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+# SessionStart hook for hall-of-fame skill
+
+set -euo pipefail
+
+# Determine plugin root directory
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" && pwd)"
+PLUGIN_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+
+# Session context injection - lightweight notification
+session_context="<名人堂skills专家集合>\n\n⭐ 本项目已集成名人堂专家集合 skill\n\n聚合13位顶尖专家，为你提供专业建议:\n\n📚 教育升学: 张雪峰\n🚀 产品增长: 张一鸣、MrBeast、乔布斯\n💡 创业商业: Paul Graham、马斯克\n💰 投资财富: 查理·芒格、Naval\n🔬 思维学习: 费曼、塔勒布\n✍️ 写作思考: 王小波\n🎭 传统智慧: 郭德纲\n⚖️ 法理正义: 罗翔\n\n使用方式:\n- /hall-of-fame \"你的问题\"\n- 系统自动路由到最合适的专家\n- 专家以其独特视角回答你的问题\n\n示例:\n/hall-of-fame \"高考选专业\"\n→ 自动路由到张雪峰\n\n/hall-of-fame \"产品怎么增长\"\n→ 自动路由到张一鸣或MrBeast\n\n触发关键词: 高考、专业、产品、投资、创业、财富、学习、风险、写作、法律、相声等\n\n</名人堂专家集合>"
+
+# Output context injection as JSON
+# Claude Code hooks expect hookSpecificOutput.additionalContext
+if [ -n "${CLAUDE_PLUGIN_ROOT:-}" ]; then
+    # Claude Code sets CLAUDE_PLUGIN_ROOT — emit only hookSpecificOutput
+    cat <<EOF
+{
+  "hookSpecificOutput": {
+    "hookEventName": "SessionStart",
+    "additionalContext": "${session_context}"
+  }
+}
+EOF
+else
+    # Other platforms — emit only additional_context
+    cat <<EOF
+{
+  "additional_context": "${session_context}"
+}
+EOF
+fi
+
+exit 0

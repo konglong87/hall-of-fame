@@ -1,0 +1,28 @@
+{
+  "name": "hall-of-fame",
+  "displayName": "名人堂专家集合",
+  "description": "聚合13位顶尖专家(张雪峰、张一鸣、MrBeast、乔布斯、Paul Graham、马斯克、芒格、Naval、费曼、塔勒布、王小波、郭德纲、罗翔)，智能路由到最合适的专家，提供专业视角建议。",
+  "version": "1.0.0",
+  "author": {
+    "name": "恐龙创新部",
+    "url": "https://github.com/konglong87"
+  },
+  "homepage": "https://github.com/konglong87/hall-of-fame",
+  "repository": "https://github.com/konglong87/hall-of-fame",
+  "license": "MIT",
+  "keywords": [
+    "hall-of-fame",
+    "experts",
+    "perspective",
+    "routing",
+    "decision-making",
+    "multi-expert",
+    "education",
+    "product-growth",
+    "startup",
+    "investment",
+    "thinking",
+    "writing"
+  ],
+  "skills": "./"
+}

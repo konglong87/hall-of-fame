@@ -1,0 +1,19 @@
+{
+  "name": "hall-of-fame",
+  "owner": {
+    "name": "恐龙创新部",
+    "url": "https://github.com/konglong87"
+  },
+  "plugins": [
+    {
+      "name": "hall-of-fame",
+      "description": "名人堂专家集合 - 聚合13位顶尖专家思维框架。智能路由系统(关键词匹配+LLM分类)，动态加载专家SKILL.md，SessionStart Hook自动注入。覆盖教育升学(张雪峰)、产品增长(张一鸣、MrBeast、乔布斯)、创业商业(Paul Graham、马斯克)、投资财富(芒格、Naval)、思维学习(费曼、塔勒布)、写作思考(王小波)、传统智慧(郭德纲)、法理正义(罗翔)。",
+      "version": "1.0.0",
+      "source": "./",
+      "author": {
+        "name": "恐龙创新部",
+        "url": "https://github.com/konglong87"
+      }
+    }
+  ]
+}

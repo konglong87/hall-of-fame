@@ -1,0 +1,125 @@
+{
+  "routing_rules": {
+    "education": {
+      "expert": "zhangxuefeng-perspective",
+      "primary_keywords": ["高考", "专业", "考研", "院校", "大学", "志愿填报", "就业率", "升学", "报考", "选专业", "分数"],
+      "secondary_keywords": ["学校", "录取", "分数线", "保研", "就业前景", "学科", "系", "毕业"],
+      "threshold": 0.7,
+      "description": "教育升学专家，就业数据导向"
+    },
+    "product_growth_content": {
+      "expert": "mrbeast-perspective",
+      "primary_keywords": ["视频", "标题", "封面", "缩略图", "CTR", "留存率", "完播率", "YouTube", "B站", "抖音", "流量"],
+      "secondary_keywords": ["内容创作", "播放量", "推荐算法", "feed", "内容策略"],
+      "threshold": 0.75,
+      "description": "YouTube方法论、CTR优化实战"
+    },
+    "product_growth_strategy": {
+      "expert": "zhang-yiming-perspective",
+      "primary_keywords": ["产品", "增长策略", "推荐", "算法分发", "全球化", "组织管理", "字节", "头条", "抖音"],
+      "secondary_keywords": ["用户增长", "产品策略", "信息分发", "网络效应", "飞轮", "迭代"],
+      "threshold": 0.7,
+      "description": "算法分发策略、组织管理经验"
+    },
+    "design_ux": {
+      "expert": "steve-jobs-perspective",
+      "primary_keywords": ["设计", "用户体验", "极简", "美学", "交互", "UI", "Apple", "产品哲学"],
+      "secondary_keywords": ["简洁", "端到端", "垂直整合", "体验优化", "界面设计"],
+      "threshold": 0.75,
+      "description": "极简主义、端到端体验控制"
+    },
+    "startup_yc": {
+      "expert": "paul-graham-perspective",
+      "primary_keywords": ["创业", "startup", "YC", "创始人", "融资", "天使投资", "早期", "founder"],
+      "secondary_keywords": ["创业方向", "创业想法", "商业模式", "MVP", "ramen profitable"],
+      "threshold": 0.7,
+      "description": "YC经验、早期投资洞察"
+    },
+    "startup_technology": {
+      "expert": "elon-musk-perspective",
+      "primary_keywords": ["第一性原理", "成本拆解", "白痴指数", "垂直整合", "火箭", "Tesla", "SpaceX", "技术创业"],
+      "secondary_keywords": ["制造", "产能", "迭代速度", "物理极限", "渐近极限"],
+      "threshold": 0.75,
+      "description": "第一性原理、激进迭代"
+    },
+    "investment": {
+      "expert": "munger-perspective",
+      "primary_keywords": ["投资", "股票", "基金", "认知偏误", "逆向思考", "护城河", "价值投资", "决策审视", "芒格"],
+      "secondary_keywords": ["风险", "复利", "能力圈", "激励结构", "决策检查"],
+      "threshold": 0.7,
+      "description": "认知偏误检测、逆向思考"
+    },
+    "wealth_leverage": {
+      "expert": "naval-perspective",
+      "primary_keywords": ["财富", "杠杆", "特定知识", "自由", "欲望管理", "无需许可", "退休定义", "Naval"],
+      "secondary_keywords": ["被动收入", "财富自由", "幸福", "身份标签", "specific knowledge"],
+      "threshold": 0.7,
+      "description": "杠杆策略、特定知识框架"
+    },
+    "learning_concept": {
+      "expert": "feynman-perspective",
+      "primary_keywords": ["理解", "学习", "概念", "货物崇拜", "命名≠理解", "费曼", "解释", "简单解释"],
+      "secondary_keywords": ["验证理解", "自欺", "不确定性", "科学思维", "实验验证"],
+      "threshold": 0.75,
+      "description": "科学思维、反自欺原则"
+    },
+    "risk_uncertainty": {
+      "expert": "taleb-perspective",
+      "primary_keywords": ["风险", "不确定性", "反脆弱", "黑天鹅", "塔勒布", "Taleb", "非线性"],
+      "secondary_keywords": ["脆弱", "稳健", "极端事件", "概率", "幸存者偏差"],
+      "threshold": 0.7,
+      "description": "反脆弱思维、不确定性应对"
+    },
+    "writing_rationality": {
+      "expert": "wang-xiaobo-perspective",
+      "primary_keywords": ["写作", "独立思考", "有趣", "理性", "荒谬", "沉默", "自由", "王小波"],
+      "secondary_keywords": ["逻辑", "批判", "反讽", "幽默", "文学", "认知", "权力"],
+      "threshold": 0.7,
+      "description": "理性写作、独立思考、对抗荒谬"
+    },
+    "tradition_humanity": {
+      "expert": "guodegang-perspective",
+      "primary_keywords": ["相声", "德云社", "手艺人", "观众", "规矩", "江湖", "郭德纲", "人情世故"],
+      "secondary_keywords": ["传统", "艺术", "师徒", "逆境", "同行", "手艺", "门派"],
+      "threshold": 0.7,
+      "description": "传统艺术智慧、人情世故应对"
+    },
+    "law_justice": {
+      "expert": "luo-xiang-perspective",
+      "primary_keywords": ["法律", "刑法", "正义", "张三", "罗翔", "法理", "道德", "圆圈正义"],
+      "secondary_keywords": ["案件", "法条", "公平", "权利", "义务", "正义", "普法"],
+      "threshold": 0.7,
+      "description": "刑法思维、正义哲学、法理分析"
+    }
+  },
+  "multi_expert_scenarios": {
+    "product_growth": {
+      "detected_keywords": ["产品", "增长"],
+      "sub_detection": {
+        "video_content": {
+          "keywords": ["视频", "YouTube", "内容创作"],
+          "expert": "mrbeast-perspective"
+        },
+        "general_product": {
+          "keywords": ["App", "算法", "推荐系统"],
+          "expert": "zhang-yiming-perspective"
+        }
+      }
+    },
+    "startup": {
+      "detected_keywords": ["创业"],
+      "sub_detection": {
+        "cost_technology": {
+          "keywords": ["成本", "第一性原理", "制造", "技术"],
+          "expert": "elon-musk-perspective"
+        },
+        "general_startup": {
+          "keywords": ["YC", "融资", "商业模式"],
+          "expert": "paul-graham-perspective"
+        }
+      }
+    }
+  },
+  "fallback_expert": "paul-graham-perspective",
+  "llm_classification_prompt_template": "用户问题：{user_question}\n\n可用专家列表：\n[13位专家的简要描述]\n\n任务要求：\n分析用户问题，选择最合适的专家。输出格式：\n专家名称: {expert-name}\n理由: {一句话说明}\n置信度: {high/medium/low}\n\n判断标准：\n1. 优先匹配问题的核心主题\n2. 考虑专家的独特方法论是否适用\n3. 如果问题涉及多个领域，选择主要矛盾所在领域的专家\n4. 如果无法明确分类，选择Paul Graham（通用专家）"
+}
