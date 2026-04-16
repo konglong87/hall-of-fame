@@ -29,16 +29,113 @@
 ## 安装
 
 ### Claude Code
-参考 `.claude-plugin/plugin.json` 和 `.claude-plugin/marketplace.json`
+
+**方式一：项目本地安装（仅当前项目可用）**
+
+```bash
+# 进入你的项目目录
+cd /path/to/your/project
+
+# 克隆技能到项目目录
+git clone https://github.com/konglong87/hall-of-fame.git .claude/skills/hall-of-fame
+```
+
+**方式二：全局安装（所有项目可用）**
+
+```bash
+# 创建全局技能目录并克隆
+mkdir -p ~/.claude/skills
+git clone https://github.com/konglong87/hall-of-fame.git ~/.claude/skills/hall-of-fame
+```
+
+**验证安装**
+
+```bash
+# 检查技能是否正确安装
+ls -la ~/.claude/skills/hall-of-fame/SKILL.md
+```
+
+---
 
 ### Cursor IDE
-参考 `.cursor-plugin/plugin.json`
+
+```bash
+# 创建 Cursor 技能目录并克隆
+mkdir -p ~/.cursor/skills
+git clone https://github.com/konglong87/hall-of-fame.git ~/.cursor/skills/hall-of-fame
+```
+
+---
 
 ### Codex CLI
-参考 `.codex/INSTALL.md`
+
+**macOS / Linux:**
+
+```bash
+# 1. 克隆仓库到 Codex 配置目录
+git clone https://github.com/konglong87/hall-of-fame.git ~/.codex/hall-of-fame
+
+# 2. 创建技能目录（如果不存在）
+mkdir -p ~/.agents/skills
+
+# 3. 创建软链接让 Codex 发现技能
+ln -s ~/.codex/hall-of-fame ~/.agents/skills/hall-of-fame
+
+# 4. 重启 Codex CLI
+```
+
+**Windows (PowerShell):**
+
+```powershell
+# 1. 克隆仓库
+git clone https://github.com/konglong87/hall-of-fame.git "$env:USERPROFILE\.codex\hall-of-fame"
+
+# 2. 创建技能目录
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.agents\skills"
+
+# 3. 创建目录联接（junction）
+cmd /c mklink /J "$env:USERPROFILE\.agents\skills\hall-of-fame" "$env:USERPROFILE\.codex\hall-of-fame"
+
+# 4. 重启 Codex CLI
+```
+
+---
 
 ### OpenCode
-参考 `.opencode/INSTALL.md`
+
+**macOS / Linux:**
+
+```bash
+# 1. 克隆仓库到 OpenCode 配置目录
+git clone https://github.com/konglong87/hall-of-fame.git ~/.config/opencode/hall-of-fame
+
+# 2. 创建插件目录并链接
+mkdir -p ~/.config/opencode/plugins
+ln -s ~/.config/opencode/hall-of-fame/.opencode/plugins/hall-of-fame.js ~/.config/opencode/plugins/hall-of-fame.js
+
+# 3. 创建技能目录并链接
+mkdir -p ~/.config/opencode/skills
+ln -s ~/.config/opencode/hall-of-fame ~/.config/opencode/skills/hall-of-fame
+
+# 4. 重启 OpenCode
+```
+
+**Windows (PowerShell):**
+
+```powershell
+# 1. 克隆仓库
+git clone https://github.com/konglong87/hall-of-fame.git "$env:USERPROFILE\.config\opencode\hall-of-fame"
+
+# 2. 创建插件目录并链接
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.config\opencode\plugins"
+cmd /c mklink /J "$env:USERPROFILE\.config\opencode\plugins\hall-of-fame.js" "$env:USERPROFILE\.config\opencode\hall-of-fame\.opencode\plugins\hall-of-fame.js"
+
+# 3. 创建技能目录并链接
+New-Item -ItemType Directory -Force -Path "$env:USERPROFILE\.config\opencode\skills"
+cmd /c mklink /J "$env:USERPROFILE\.config\opencode\skills\hall-of-fame" "$env:USERPROFILE\.config\opencode\hall-of-fame"
+
+# 4. 重启 OpenCode
+```
 
 ## 快速使用
 
